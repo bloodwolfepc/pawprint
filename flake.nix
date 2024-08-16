@@ -16,15 +16,14 @@
       url = "github:bloodwolfepc/nixvim";
     };
   };
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, ... }@inputs :
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    inherit (self) outputs;
   in {
     homeConfigurations."deck" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      extraSpecialArgs = { inherit inputs outputs; };
+      extraSpecialArgs = { inherit inputs; };
       modules = [ ./config/home.nix ];
     };
   }; 
