@@ -23,7 +23,7 @@
   in {
     homeConfigurations."deck" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      modules = [ ./home.nix ];
+      modules = [ ./config/home.nix ];
     };
   }; 
 }

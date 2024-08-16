@@ -7,15 +7,15 @@
     ripgrep.enable = true;
     ssh.enable = true;
   };
-    hyfetch = {
-      enable = true;
-      settings = {
-        preset = "transgender";
-        mode = "rgb";
-        color_align = {
-          mode = "horizontal";
-        };
+  programs.hyfetch = {
+    enable = true;
+    settings = {
+      preset = "transgender";
+      mode = "rgb";
+      color_align = {
+        mode = "horizontal";
       };
+    };
   };
   programs.zoxide = {
     enable = true;

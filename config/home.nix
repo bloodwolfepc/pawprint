@@ -4,7 +4,7 @@
     ./firefox
     ./zsh
     ./wine
-    ./theme
+    #./theme
     ./tmux
     ./alacritty
     ./scripts

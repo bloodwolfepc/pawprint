@@ -1,8 +1,8 @@
 { pkgs, inputs, lib, config, ... }: {
   imports = [ inputs.stylix.homeManagerModules.stylix ];
   stylix = {
-    image = ../assets/wallpapers/flcl.png;
     enable = true;
+    image = ../assets/wallpapers/flcl.png;
     base16Scheme = "${ pkgs.base16-schemes }/share/themes/windows-95.yaml";
     fonts = {
       monospace = {
