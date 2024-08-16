@@ -1,5 +1,5 @@
 #based on https://github.com/Misterio77/nix-config/blob/7ede608b314eb4b59a588e1d7bfc644ccc409e0e/home/gabriel/features/desktop/common/firefox.nix#L7
-{ lib, inputs, ... }:{
+{ lib, inputs, pkgs, ... }:{
   xdg.mimeApps.defaultApplications = {
     "text/html" = ["firefox.desktop"];
     "text/xml" = ["firefox.desktop"];
@@ -22,7 +22,8 @@
         };
       };
       #bookmarks = {};
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+      extensions = with pkgs.inputs.firefox-addons; [
+      #inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
         bitwarden
       ];
