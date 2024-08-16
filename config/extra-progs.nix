@@ -1,4 +1,4 @@
-{
+{ inputs, ... }: {
   programs = {
     gh.enable = true;
     htop.enable = true;
@@ -25,4 +25,5 @@
       "--cmd cd"
     ];
   };
+  home.packages = [ inputs.nixvim.packages.x86_64-linux.default ];
 }

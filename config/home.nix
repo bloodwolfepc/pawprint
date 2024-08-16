@@ -6,6 +6,7 @@
     ./wine
     ./theme
     ./tmux
+    ./alacritty
     ./scripts
   ];
   home = {
@@ -13,8 +14,8 @@
     homeDirectory = "/home/deck";
     stateVersion = "24.05";
     packages = with pkgs; [
-      inputs.nixvim.packages.x86_64-linux.default
       gay
+      lolcat
       hyfetch
       spotify
       discord
@@ -34,6 +35,10 @@
       vrrtest
 
       google-chrome
+      
+      nh
+      nix-output-monitor
+      nvd
     ];
   };
   nix = {
@@ -49,5 +54,6 @@
   programs.home-manager.enable = true;
   home.sessionVariables = {
     editor = "nvim";
+    FLAKE = "/home/deck/config";
   };
 }
