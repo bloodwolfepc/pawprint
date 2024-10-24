@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     wineWowPackages.stable
-    wine
+    #wine
     (wine.override { wineBuild = "wine64"; })
     wine64
     wineWowPackages.staging 
