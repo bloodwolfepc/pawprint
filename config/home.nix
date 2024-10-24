@@ -18,12 +18,7 @@
       lolcat
       hyfetch
       spotify
-      discord
-      
-      #reaper
-      #gimp
-      #obs
-      
+      vesktop
       prismlauncher
       retroarch
       retroarch-assets
@@ -43,7 +38,7 @@
   };
   nix = {
     package = pkgs.nix;
-    settings.experimental-feautres = [ "nix-command" "flakes" ];
+    #settings.experimental-feautres = [ "nix-command" "flakes" ];
   };
   nixpkgs = {
     config = {
@@ -54,6 +49,6 @@
   programs.home-manager.enable = true;
   home.sessionVariables = {
     editor = "nvim";
-    FLAKE = "/home/deck/config";
+    FLAKE = "/home/deck/pawprint";
   };
 }
